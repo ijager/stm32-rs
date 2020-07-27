@@ -123,6 +123,11 @@ USART1:
         description: USART3 + USART4 interrupt
         value: 29
 
+USART*:
+  ICR:
+    _modify:
+      NCF:
+        name: NCEF
 # Remove interrupts from derived Peripherals (after we renamed and moved them to the base peripherals)
 # Since it is not possible to modify a derivedFrom peripheral, we delete it first
 # and then add it again without the interrupts.
